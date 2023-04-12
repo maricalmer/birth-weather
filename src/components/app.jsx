@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import * as THREE from 'three'
 import CLOUDS from 'vanta/dist/vanta.clouds.min'
 
+import Calendar from './calendar';
+import SearchBar from './search_bar';
+
 class App extends Component {
   constructor() {
     super()
@@ -21,7 +24,7 @@ class App extends Component {
     return (
       <div className="App-container" ref={this.vantaRef}>
         < Calendar />
-        < CitySelect />
+        < SearchBar />
       </div>
     );
   }
