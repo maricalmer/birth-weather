@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import fetchCityGeocode from '../utils/api/fetchCityGeocode';
 
-class SearchBar extends Component {
-    handleUpdate = (event) => {
-      this.props.searchFunction(event.target.value);
-    }
-  
-    render() {
-      return (
-        <input
-          type="text"
-          className="form-control form-search"
-          onChange={this.handleUpdate}
-        />
-      );
-    }
+
+const SearchBar = (props) => {
+    return (
+      <input
+        type="text"
+        className="form-control form-search"
+				onChange={() => fetchCityGeocode()}
+      />
+    );
+
   }
   
-  export default SearchBar;
+export default SearchBar;
