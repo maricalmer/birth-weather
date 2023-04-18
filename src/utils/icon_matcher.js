@@ -7,13 +7,13 @@ function getAverage(selectedValues) {
 }
 
 const matchIconClass = (weatherData) => {
-	if (weatherData.daily.snowfall_sum[0] > 0) return 'snowflake';
-	if (getTotalAmountHoursOf(weatherData.hourly.rain).length > 5) return 'cloud-showers-heavy';
-	if (getTotalAmountHoursOf(weatherData.hourly.rain).length > 0 && getAverage(weatherData.hourly.cloudcover_mid) > 20) return 'cloud-rain';
-	if (getTotalAmountHoursOf(weatherData.hourly.rain).length > 0) return 'cloud-sun-rain';
-	if (getTotalAmountHoursOf(weatherData.hourly.cloudcover_mid).length > 5) return 'cloud';
-	if (getTotalAmountHoursOf(weatherData.hourly.cloudcover_mid).length > 2) return 'cloud-sun';
-	return 'sun';
+	if (weatherData.daily.snowfall_sum[0] > 0) return "fa-solid fa-snowflake";
+	if (getTotalAmountHoursOf(weatherData.hourly.rain).length > 5) return "fa-solid fa-cloud-showers-heavy";
+	if (getTotalAmountHoursOf(weatherData.hourly.rain).length > 0 && getAverage(weatherData.hourly.cloudcover_mid) > 20) return "fa-solid fa-cloud-rain";
+	if (getTotalAmountHoursOf(weatherData.hourly.rain).length > 0) return "fa-solid fa-cloud-sun-rain";
+	if (getTotalAmountHoursOf(weatherData.hourly.cloudcover_mid).length > 5) return "fa-solid fa-cloud";
+	if (getTotalAmountHoursOf(weatherData.hourly.cloudcover_mid).length > 2) return "fa-solid fa-cloud-sun";
+	return "fa-solid fa-sun";
 }
 
 export default matchIconClass;

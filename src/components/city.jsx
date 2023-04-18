@@ -4,7 +4,7 @@ const City = (props) => {
 	const srcUrl = `https://hatscripts.github.io/circle-flags/flags/${props.city.country_code.toLowerCase()}.svg`
 
 	const handleClick = () => {
-		props.updateCityInfo(props.city)
+		props.updateSelectedCity(props.city)
 	}
 
   return (

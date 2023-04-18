@@ -10,10 +10,15 @@ import getCityData from '../hooks/useCityData.js'
 import SearchBar from './search_bar';
 import CityList from './city_list';
 import Calendar from './calendar';
+import WeatherIcon from './weather_icon';
+import CityWeatherData from './city_weather_data';
 
 const App = () => {
   const [query, setQuery] = useState('berlin');
   const [suggestedCities, setSuggestedCities] = useState(null);
+  const [selectedCity, setSelectedCity] = useState(null);
+  const [selectedBirthDate, setSelectedBirthDate] = useState(null);
+  const [cityData, setCityData] = useState(null);
   const [cityWeatherIcon, setCityWeatherIcon] = useState(null);
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
@@ -36,18 +41,28 @@ const App = () => {
     setSuggestedCities(citiesData);
   }
 
-  const updateCityInfo = async (city) => {
-    const cityData = await getCityData(city);
-		const weatherIcon = await matchIconClass(cityData);
+  const updateSelectedCity = (city) => {
+    setSelectedCity(city);
+  }
+
+  const updateSelectedBirthDate = (date) => {
+    setSelectedBirthDate(date);
+  }
+
+  const updateCityInfo = async (date) => {
+    const cityData = await getCityData(selectedCity, date);
+    setCityData(cityData);
+		const weatherIcon = matchIconClass(cityData);
 		setCityWeatherIcon(weatherIcon);
-    console.log(weatherIcon)
   }
 
   return (
     <div className="App-container" ref={myRef}>
       < SearchBar query={query} updateSuggestedCities={updateSuggestedCities}/>
-      < CityList suggestedCities={suggestedCities} updateCityInfo={updateCityInfo}/>
-      < Calendar/>
+      < CityList suggestedCities={suggestedCities} updateSelectedCity={updateSelectedCity}/>
+      < Calendar updateSelectedBirthDate={updateSelectedBirthDate} updateCityInfo={updateCityInfo}/>
+      < WeatherIcon cityWeatherIcon={cityWeatherIcon}/>
+      < CityWeatherData cityData={cityData}/>
     </div>
   )
 }

@@ -25,3 +25,16 @@ code {
 .city-item {
   margin: 0.5em;
 }
+
+.city-weather-data {
+  position: relative;
+  z-index: 1;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
