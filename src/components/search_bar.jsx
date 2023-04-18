@@ -4,9 +4,9 @@ const SearchBar = (props) => {
   const query = props.query
 
   const handleChange = (newQuery) => {
-    props.setQuery(newQuery)
-    props.getCitiesData(newQuery)
+    props.updateSuggestedCities(newQuery)
   }
+  
   return (
     <form onSubmit={(e) => {e.preventDefault()}}>
       <input

@@ -11,7 +11,7 @@ const CityList = (props) => {
     <div className='city_output'>
 			{cities.results.map((city) => {
 				return (
-					<City city={city} getCityGeocode={props.getCityGeocode} key={city.id}/>
+					<City city={city} updateCityInfo={props.updateCityInfo} key={city.id}/>
 				)
 			})}
     </div>
