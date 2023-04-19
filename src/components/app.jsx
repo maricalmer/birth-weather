@@ -7,8 +7,7 @@ import matchIconClass from '../utils/icon_matcher.js'
 import getCitiesData from '../hooks/useCitiesData.js'
 import getCityData from '../hooks/useCityData.js'
 
-import SearchBar from './search_bar';
-import CityList from './city_list';
+import CardContainer from './card_container';
 import Calendar from './calendar';
 import WeatherIcon from './weather_icon';
 import CityWeatherData from './city_weather_data';
@@ -58,8 +57,12 @@ const App = () => {
 
   return (
     <div className="App-container" ref={myRef}>
-      < SearchBar query={query} updateSuggestedCities={updateSuggestedCities}/>
-      < CityList suggestedCities={suggestedCities} updateSelectedCity={updateSelectedCity}/>
+      < CardContainer
+        query={query} 
+        updateSuggestedCities={updateSuggestedCities}
+        suggestedCities={suggestedCities}
+        updateSelectedCity={updateSelectedCity}
+      />
       < Calendar updateSelectedBirthDate={updateSelectedBirthDate} updateCityInfo={updateCityInfo}/>
       < WeatherIcon cityWeatherIcon={cityWeatherIcon}/>
       < CityWeatherData cityData={cityData}/>
