@@ -7,7 +7,7 @@ const Intro = (props) => {
   return (
 		<div>
     	<IntroText>
-				Check what was the weather like on your birth date
+				What was the weather like on your birth date?
 			</IntroText>
 			<IntroButton>
 				Get Started

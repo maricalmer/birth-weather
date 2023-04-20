@@ -6,11 +6,14 @@ import CLOUDS from 'vanta/dist/vanta.clouds.min'
 import matchIconClass from '../utils/icon_matcher.js'
 import getCitiesData from '../hooks/useCitiesData.js'
 import getCityData from '../hooks/useCityData.js'
+import AppContainer from '../styled/app_container.js'
+import CloudsContainer from '../styled/clouds_container.js'
 
 import CardContainer from './card_container';
 import Calendar from './calendar';
 import WeatherIcon from './weather_icon';
 import CityWeatherData from './city_weather_data';
+import CloudsBorder from '../styled/clouds_border.js'
 
 const App = () => {
   const [query, setQuery] = useState('berlin');
@@ -56,16 +59,22 @@ const App = () => {
   }
 
   return (
-    <div className="App-container" ref={myRef}>
-      < CardContainer
-        query={query} 
-        updateSuggestedCities={updateSuggestedCities}
-        suggestedCities={suggestedCities}
-        updateSelectedCity={updateSelectedCity}
-      />
-      < Calendar updateSelectedBirthDate={updateSelectedBirthDate} updateCityInfo={updateCityInfo}/>
-      < WeatherIcon cityWeatherIcon={cityWeatherIcon}/>
-      < CityWeatherData cityData={cityData}/>
+    <div>
+      < AppContainer>
+        < CloudsContainer ref={myRef}>
+          < CloudsBorder>
+            < CardContainer
+              query={query} 
+              updateSuggestedCities={updateSuggestedCities}
+              suggestedCities={suggestedCities}
+              updateSelectedCity={updateSelectedCity}
+            />
+            < Calendar updateSelectedBirthDate={updateSelectedBirthDate} updateCityInfo={updateCityInfo}/>
+            < WeatherIcon cityWeatherIcon={cityWeatherIcon}/>
+            < CityWeatherData cityData={cityData}/>
+          </CloudsBorder>
+        </CloudsContainer>
+      </AppContainer>
     </div>
   )
 }

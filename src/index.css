@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #2d2f31;
 }
 
 code {
@@ -12,10 +13,6 @@ code {
     monospace;
 }
 
-.App-container {
-  width: 100vw;
-  height: 100vh;
-}
 .city {
   position: relative;
   display: flex;
