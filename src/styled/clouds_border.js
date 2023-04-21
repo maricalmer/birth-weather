@@ -6,7 +6,7 @@ const CloudsBorder = styled.div`
 	border-radius: 25px;
 	box-shadow: 0 0 0 100px #2d2f31;
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 `;
 
 export default CloudsBorder;

@@ -35,3 +35,18 @@ code {
   position: relative;
   z-index: 1;
 }
+
+.intro-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 150px;
+  padding: 3em 0;
+}
+
+.title-anime {
+  transition: 1.5s ease-out;
+}
+.title-anime__animated {
+  transform: translateY(-390px);
+}
