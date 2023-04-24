@@ -4,7 +4,6 @@ const IntroButton = styled.div`
 	width: fit-content;
 	height: 48px;
 	padding: 8px 48px;
-	margin: 16px auto 0 auto;
 	border-radius: 48px;
 	border: 0;
 	background-color: #a8c7fa;

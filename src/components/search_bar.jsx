@@ -13,7 +13,7 @@ const SearchBar = (props) => {
         type="text"
         value={query}
         onChange={(e) => {handleChange(e.target.value)}}
-        className="form-control form-search"
+        className="search-form__input form-control form-search"
       />
     </form>
   );

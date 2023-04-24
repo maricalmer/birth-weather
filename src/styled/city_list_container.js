@@ -7,7 +7,6 @@ const CityListContainer = styled.div`
 	justify-content: center;
 	text-align: center;
 	width: 650px;
-	display: none;
 `;
 
 export default CityListContainer;

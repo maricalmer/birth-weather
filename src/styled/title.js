@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-const IntroText = styled.div`
+const Title = styled.div`
 	font-family: 'Sora', sans-serif;
-	font-size: 24px;
+	font-size: 48px;
 	font-weight: bold;
-	color: #2d2f31;
-	margin: 0 auto;
+	color: #e3e3e3;
 	text-align: center;
+    z-index: 3;
+	margin-top: 8px;
 `;
 
-export default IntroText;
+export default Title;

@@ -14,8 +14,8 @@ import Calendar from './calendar';
 import WeatherIcon from './weather_icon';
 import CityWeatherData from './city_weather_data';
 import CloudsBorder from '../styled/clouds_border.js'
-import TitleBackContainer from '../styled/title_back_container.js'
-import TitleBack from '../styled/title_back.js'
+import TitleContainer from '../styled/title_container.js'
+import Title from '../styled/title.js'
 
 const App = () => {
   const [query, setQuery] = useState('berlin');
@@ -63,6 +63,11 @@ const App = () => {
   return (
     <div>
       < AppContainer>
+        < TitleContainer>
+          < Title>
+            What was the weather like on your birth date?
+          </Title>
+        </TitleContainer>
         < CloudsContainer ref={myRef}>
           < CloudsBorder>
             < CardContainer
@@ -76,11 +81,6 @@ const App = () => {
             < CityWeatherData cityData={cityData}/>
           </CloudsBorder>
         </CloudsContainer>
-        < TitleBackContainer>
-          < TitleBack className='title-anime'>
-            What was the weather like on your birth date?
-          </TitleBack>
-        </TitleBackContainer>
       </AppContainer>
     </div>
   )

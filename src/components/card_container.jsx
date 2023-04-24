@@ -14,10 +14,10 @@ const IntroCard = (props) => {
   return (
 		<CardWrapper>
     	<Card>
-				< IntroContainer>
+				< IntroContainer className='intro-card'>
 					< Intro/>
 				</IntroContainer>
-				< SearchBarContainer>
+				< SearchBarContainer className='search-card'>
 					< SearchBar query={props.query} updateSuggestedCities={props.updateSuggestedCities}/>
 				</SearchBarContainer>
 				< CityListContainer>

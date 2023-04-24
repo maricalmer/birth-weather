@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-const TitleBackContainer = styled.div`
+const TitleContainer = styled.div`
 	position: absolute;
-	height: 100%;
+	top: 0;
+	min-height: 100px;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 135px;
 `;
 
-export default TitleBackContainer;
+export default TitleContainer;

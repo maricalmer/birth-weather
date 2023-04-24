@@ -7,7 +7,7 @@ const SearchBarContainer = styled.div`
   justify-content: center;
   text-align: center;
 	width: 650px;
-	display: none;
+	bottom: 0;
 `;
 
 export default SearchBarContainer;
