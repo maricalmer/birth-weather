@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #2d2f31;
@@ -17,17 +15,30 @@ code {
   position: absolute;
   top: 20px;
   left: 165px;
+  overflow: hidden;
 }
 
 .city {
   position: relative;
   display: flex;
   flex-direction: 'column';
+  padding-right: 0.5rem;
   z-index: 1;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+.city:hover {
+  font-weight: bold;
+  background-color: rgba(168, 199, 250, .4);
 }
 
 .city-item {
   margin: 0.5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .city-weather-data {
@@ -44,28 +55,78 @@ code {
 }
 
 .intro-card {
-  transition: transform 2s ease-out, opacity 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
-.intro-card__animated {
-  transform: translateY(-500px);
+.intro-card__animated--fade-out {
   opacity: 0;
+}
+
+.intro-card__animated--move-out {
+  transform: translateY(-410px);
 }
 
 .search-card {
   opacity: 0;
-  transition: 0.7s ease-in;
+  transition: 0.9s ease-in-out;
 }
 
-.search-card__animated {
+.search-card__animated--in {
   opacity: 1;
   transform: translateY(-410px);
+}
+
+.search-card__animated--out {
+  opacity: 0;
+  transform: translateY(-410px);
+}
+
+.suggested-cities-card {
+  opacity: 1;
+  transition: 0.5s ease-out;
+}
+
+.suggested-cities-card__animated--fade-out {
+  opacity: 0;
+}
+
+.suggested-cities-card__animated--move-out {
+  transform: translateY(-410px);
+}
+
+.calendar-card {
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+}
+
+.calendar-card__animated--in {
+  opacity: 1;
+  transform: translateY(-435px);
+}
+
+.calendar-card__animated--fade-out {
+  opacity: 0;
+}
+
+.calendar-card__animated--move-out {
+  transform: translateY(-870px);
+}
+
+.results-data-card {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.results-data-card__animated--in {
+  opacity: 1;
+  transform: translateY(-435px);
 }
 
 .search-form__input {
   font-size: 24px;
   font-family: 'Sora', sans-serif;
   font-weight: bold;
+  color:#2d2f31;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #2d2f31;
@@ -74,4 +135,18 @@ code {
 
 .search-form__input:focus {
   outline: none;
+}
+
+.weather-icon {
+  font-size: 96px;
+  color:#2d2f31;
+}
+
+.icon-title {
+  color:#2d2f31;
+}
+
+.city-weather-data {
+  margin-left: 5rem;
+  color:#2d2f31;
 }

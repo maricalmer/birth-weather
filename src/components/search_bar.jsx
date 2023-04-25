@@ -12,8 +12,10 @@ const SearchBar = (props) => {
       <input
         type="text"
         value={query}
+        placeholder="type here..."
         onChange={(e) => {handleChange(e.target.value)}}
         className="search-form__input form-control form-search"
+        name="city"
       />
     </form>
   );

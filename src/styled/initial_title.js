@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Title = styled.div`
+const InitialTitle = styled.div`
 	font-family: 'Sora', sans-serif;
 	font-size: 48px;
 	font-weight: bold;
@@ -10,4 +10,4 @@ const Title = styled.div`
 	margin-top: 8px;
 `;
 
-export default Title;
+export default InitialTitle;

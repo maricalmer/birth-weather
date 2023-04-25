@@ -1,13 +1,17 @@
 import React from 'react';
 
 import IntroButton from '../styled/intro_button';
+import { showTitle, hideTitle } from '../utils/title_motion';
+import { hideIntroCard, showSearchCard } from '../utils/frame_motion';
 
 const Intro = (props) => {
-	const handleOnClick = (e) => {
-		const firstFrame = document.querySelector('.intro-card');
-		const secondFrame = document.querySelector('.search-card');
-		firstFrame.classList.add("intro-card__animated");
-		secondFrame.classList.add("search-card__animated");
+	const handleOnClick = () => {
+		hideIntroCard();
+		showSearchCard();
+		const whatWeatherTitle = document.querySelector('.what-weather-title-anime-js');
+		const whatCityTitle = document.querySelector('.what-city-title-anime-js');
+		hideTitle(whatWeatherTitle);
+		showTitle(whatCityTitle);
 	}
   return (
 		<IntroButton onClick={handleOnClick}>

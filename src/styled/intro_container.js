@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const IntroContainer = styled.div`
   position: absolute;
   top: 0;
