@@ -8,4 +8,4 @@ const getCityData = async (city, date) => {
   return data;
 }
 
-  export default getCityData;
+export default getCityData;

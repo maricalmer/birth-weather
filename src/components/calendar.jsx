@@ -4,22 +4,21 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 
 import dayjs from 'dayjs';
-import convertDate from '../utils/date_converter';
 
-import { hideCalendarCard, showResultsCard } from '../utils/frame_motion';
+import { convertDateForApi } from '../utils/date_converter';
+import { hideCalendarCard, showSearchCard } from '../utils/frame_motion';
 import { showTitle, hideTitle } from '../utils/title_motion';
 
 const Calendar = (props) => {
   const handleAccept = (date) => {
-    const formattedDate = convertDate(date);
+    const formattedDate = convertDateForApi(date);
     props.updateSelectedBirthDate(formattedDate);
-    props.updateCityInfo(formattedDate);
-    const whatDateTitle = document.querySelector('.what-date-title-anime-js');
-		const resultsTitle = document.querySelector('.results-title-anime-js');
-		hideTitle(whatDateTitle);
-		showTitle(resultsTitle);
     hideCalendarCard();
-    showResultsCard();
+    showSearchCard();
+    const whatDateTitle = document.querySelector('.what-date-title-anime-js');
+		const whatCityTitle = document.querySelector('.what-city-title-anime-js');
+    hideTitle(whatDateTitle);
+		showTitle(whatCityTitle);
   }
 
   return (

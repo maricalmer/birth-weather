@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { hideSuggestedCities, hideSearchCard, showCalendarCard } from '../utils/frame_motion';
+import { hideSuggestedCities, hideSearchCard, showResultsCard } from '../utils/frame_motion';
 import { showTitle, hideTitle } from '../utils/title_motion';
 
 const City = (props) => {
@@ -8,13 +8,14 @@ const City = (props) => {
 
 	const handleClick = () => {
 		props.updateSelectedCity(props.city)
+		props.updateCityInfo(props.city);
 		hideSuggestedCities();
 		hideSearchCard();
-		showCalendarCard();
+		showResultsCard();
 		const whatCityTitle = document.querySelector('.what-city-title-anime-js');
-		const whatDateTitle = document.querySelector('.what-date-title-anime-js');
+		const resultsTitle = document.querySelector('.results-title-anime-js');
 		hideTitle(whatCityTitle);
-		showTitle(whatDateTitle);
+		showTitle(resultsTitle);
 	}
 
   return (

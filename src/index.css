@@ -76,9 +76,12 @@ code {
   transform: translateY(-410px);
 }
 
-.search-card__animated--out {
+.search-card__animated--fade-out {
   opacity: 0;
-  transform: translateY(-410px);
+}
+
+.search-card__animated--move-out {
+  transform: translateY(-820px);
 }
 
 .suggested-cities-card {
@@ -115,11 +118,21 @@ code {
 .results-data-card {
   opacity: 0;
   transition: 1s ease-in-out;
+  position: relative;
+  bottom: -440px;
 }
 
 .results-data-card__animated--in {
   opacity: 1;
-  transform: translateY(-435px);
+  transform: translateY(-450px);
+}
+
+.results-data-card__animated--fade-out {
+  opacity: 0;
+}
+
+.results-data-card__animated--move-out {
+  transform: translateY(-670px);
 }
 
 .search-form__input {
@@ -138,15 +151,26 @@ code {
 }
 
 .weather-icon {
-  font-size: 96px;
+  font-size: 136px;
   color:#2d2f31;
+  position: relative;
+  bottom: 65px;
+  right: 40px;
 }
 
 .icon-title {
   color:#2d2f31;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .city-weather-data {
-  margin-left: 5rem;
   color:#2d2f31;
+  text-align: left;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.city-weather-data__category {
+  background-color: #2d2f31;
+  color: #e3e3e3;
 }

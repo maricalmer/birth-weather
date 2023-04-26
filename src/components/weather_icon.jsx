@@ -5,8 +5,8 @@ const WeatherIcon = (props) => {
 
   return (
     <div>
-      <div className='icon-title'>{`${props.cityWeatherIcon.description}`}</div>
       <i className={`weather-icon ${props.cityWeatherIcon.class}`}></i>
+      <div className='icon-title'>{`${props.cityWeatherIcon.description}`}</div>
     </div>
   );
 }

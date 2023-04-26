@@ -15,6 +15,7 @@ import TitleContainer from '../styled/title_container.js'
 import InitialTitle from '../styled/initial_title.js'
 import HiddenTitle from '../styled/hidden_title.js'
 
+
 const App = () => {
   const [query, setQuery] = useState('');
   const [suggestedCities, setSuggestedCities] = useState(null);
@@ -43,25 +44,25 @@ const App = () => {
     setSuggestedCities(citiesData);
   }
 
-  const updateSelectedCity = (city) => {
-    console.log('in updateSelectedCity');
-    setSelectedCity(city);
-  }
-
   const updateSelectedBirthDate = (date) => {
     console.log('in updateSelectedBirthDate');
     setSelectedBirthDate(date);
   }
 
-  const updateCityInfo = async (date) => {
+  const updateSelectedCity = (city) => {
+    console.log('in updateSelectedCity');
+    setSelectedCity(city);
+  }
+
+  const updateCityInfo = async (city) => {
     console.log('in updateCityInfo');
-    const cityData = await getCityData(selectedCity, date);
+    const cityData = await getCityData(city, selectedBirthDate);
     setCityData(cityData);
 		const weatherIcon = matchIconClass(cityData);
 		setCityWeatherIcon(weatherIcon);
   }
 
-  console.log(selectedCity)
+  console.log(cityData);
 
   return (
     <div>
@@ -70,14 +71,14 @@ const App = () => {
           < InitialTitle className='what-weather-title-anime-js'>
             What was the weather like on your birth date?
           </InitialTitle>
-          < HiddenTitle className='what-city-title-anime-js'>
-            In which city were you born?
-          </HiddenTitle>
           < HiddenTitle className='what-date-title-anime-js'>
             What is your date of birth?
           </HiddenTitle>
+          < HiddenTitle className='what-city-title-anime-js'>
+            In which city were you born?
+          </HiddenTitle>
           < HiddenTitle className='results-title-anime-js'>
-            {`Results for ${selectedCity.name} on ${selectedBirthDate}`}
+            Results
           </HiddenTitle>
         </TitleContainer>
         < CloudsContainer ref={myRef}>
@@ -86,6 +87,7 @@ const App = () => {
               query={query} 
               updateSuggestedCities={updateSuggestedCities}
               suggestedCities={suggestedCities}
+              selectedCity={selectedCity}
               updateSelectedCity={updateSelectedCity}
               updateSelectedBirthDate={updateSelectedBirthDate}
               updateCityInfo={updateCityInfo}
