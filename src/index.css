@@ -13,7 +13,7 @@ code {
 
 .city_output {
   position: absolute;
-  top: 20px;
+  top: 35px;
   left: 165px;
   overflow: hidden;
 }
@@ -55,84 +55,59 @@ code {
 }
 
 .intro-card {
+  opacity: 0;
+  z-index: -100;
   transition: 0.4s ease-out;
 }
 
-.intro-card__animated--fade-out {
-  opacity: 0;
-}
-
-.intro-card__animated--move-out {
-  transform: translateY(-410px);
-}
-
-.search-card {
-  opacity: 0;
-  transition: 0.9s ease-in-out;
-}
-
-.search-card__animated--in {
+.intro-card__visible {
   opacity: 1;
-  transform: translateY(-410px);
-}
-
-.search-card__animated--fade-out {
-  opacity: 0;
-}
-
-.search-card__animated--move-out {
-  transform: translateY(-820px);
-}
-
-.suggested-cities-card {
-  opacity: 1;
-  transition: 0.5s ease-out;
-}
-
-.suggested-cities-card__animated--fade-out {
-  opacity: 0;
-}
-
-.suggested-cities-card__animated--move-out {
-  transform: translateY(-410px);
+  z-index: 1;
 }
 
 .calendar-card {
   opacity: 0;
+  z-index: -100;
   transition: 0.7s ease-in-out;
 }
 
-.calendar-card__animated--in {
+.calendar-card__visible {
   opacity: 1;
-  transform: translateY(-435px);
+  z-index: 1;
 }
 
-.calendar-card__animated--fade-out {
+.search-card {
   opacity: 0;
+  z-index: -100;
+  transition: 0.9s ease-in-out;
 }
 
-.calendar-card__animated--move-out {
-  transform: translateY(-870px);
+.search-card__visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.suggested-cities-card {
+  opacity: 0;
+  z-index: -100;
+  transition: 0.5s ease-out;
+}
+
+.suggested-cities-card__visible {
+  opacity: 1;
+  z-index: 1;
 }
 
 .results-data-card {
-  opacity: 0;
-  transition: 1s ease-in-out;
   position: relative;
-  bottom: -440px;
-}
-
-.results-data-card__animated--in {
-  opacity: 1;
-  transform: translateY(-450px);
-}
-
-.results-data-card__animated--fade-out {
   opacity: 0;
+  z-index: -100;
+  transition: 1s ease-in-out;
 }
 
-.results-data-card__animated--move-out {
-  transform: translateY(-670px);
+.results-data-card__visible {
+  opacity: 1;
+  z-index: 1;
 }
 
 .search-form__input {

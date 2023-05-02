@@ -20,7 +20,7 @@ const IntroCard = (props) => {
   return (
 		<CardWrapper>
     	<Card>
-				< IntroContainer className='intro-card'>
+				< IntroContainer className='intro-card intro-card__visible'>
 					< Intro/>
 				</IntroContainer>
 				< CalendarContainer className='calendar-card'>
@@ -37,7 +37,7 @@ const IntroCard = (props) => {
 						< WeatherIcon cityWeatherIcon={props.cityWeatherIcon}/>
         		< CityWeatherData cityData={props.cityData} selectedCity={props.selectedCity}/>
 					</WeatherDataContainer>
-					< BackButtonContainer />
+					< BackButtonContainer updateSelectedCity={props.updateSelectedCity} updateSelectedBirthDate={props.updateSelectedBirthDate}  updateSuggestedCities={props.updateSuggestedCities}/>
 				</div>
     	</Card>
 		</CardWrapper>

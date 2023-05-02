@@ -3,7 +3,8 @@ import React from 'react';
 import City from './city';
 
 const CityList = (props) => {
-  const cities = props.suggestedCities
+  const cities = props.suggestedCities;
+  console.log(cities);
   if (!cities || !cities.results) return
 
   return (

@@ -41,6 +41,7 @@ const App = () => {
   const updateSuggestedCities = async (newQuery) => {
     setQuery(newQuery);
     const citiesData = await getCitiesData(newQuery);
+    console.log(citiesData);
     setSuggestedCities(citiesData);
   }
 

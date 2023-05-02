@@ -7,7 +7,6 @@ const CalendarContainer = styled.div`
   justify-content: center;
   text-align: center;
 	width: 650px;
-	bottom: -390px;
 `;
 
 export default CalendarContainer;
