@@ -6,12 +6,7 @@ body {
   background-color: #2d2f31;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.city_output {
+.suggested-cities {
   position: absolute;
   top: 35px;
   left: 165px;
@@ -34,85 +29,71 @@ code {
   background-color: rgba(168, 199, 250, .4);
 }
 
-.city-item {
+.city-data-item {
   margin: 0.5em;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.city-weather-data {
-  position: relative;
-  z-index: 1;
-}
-
-.weather-icon {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-
-.intro-card {
+.intro-frame {
   opacity: 0;
   z-index: -100;
   transition: 0.5s ease-out;
 }
 
-.intro-card__visible {
+.intro-frame__visible {
   opacity: 1;
   z-index: 1;
 }
 
-.calendar-card {
+.calendar-section {
   opacity: 0;
   z-index: -100;
   transition: 0.5s ease-in-out;
 }
 
-.calendar-card__visible {
+.calendar-section__visible {
   opacity: 1;
   z-index: 1;
 }
 
-.search-card {
+.search-bar {
   opacity: 0;
   z-index: -100;
   transition: 0.5s ease-in-out;
 }
 
-.search-card__visible {
+.search-bar__visible {
   opacity: 1;
   z-index: 1;
 }
 
-.suggested-cities-card {
+.suggested-cities-section {
   opacity: 0;
   z-index: -100;
   transition: 0.5s ease-out;
 }
 
-.suggested-cities-card__visible {
+.suggested-cities-section__visible {
   opacity: 1;
   z-index: 1;
 }
 
-.results-data-card {
+.results-data-section {
   position: relative;
   opacity: 0;
   z-index: -100;
   transition: 0.5s ease-in-out;
 }
 
-.results-data-card__visible {
+.results-data-section__visible {
   opacity: 1;
   z-index: 1;
 }
 
 .search-form__input {
   font-size: 24px;
-  font-family: 'Sora', sans-serif;
   font-weight: bold;
   color:#2d2f31;
   background-color: transparent;
@@ -129,8 +110,10 @@ code {
   font-size: 136px;
   color:#2d2f31;
   position: relative;
-  bottom: 65px;
-  right: 40px;
+  width: 200px;
+  height: 175px;
+  display: inline-block;
+  z-index: 1;
 }
 
 .icon-title {

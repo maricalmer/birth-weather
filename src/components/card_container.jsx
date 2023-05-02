@@ -12,27 +12,27 @@ import CardWrapper from '../styled/card_wrapper';
 import Card from '../styled/card';
 import IntroContainer from '../styled/intro_container';
 import SearchBarContainer from '../styled/search_bar_container';
-import CityListContainer from '../styled/city_list_container';
+import SuggestedCitiesContainer from '../styled/suggested_cities_container';
 import CalendarContainer from '../styled/calendar_container';
 import WeatherDataContainer from '../styled/weather_data_container';
 
-const IntroCard = (props) => {
+const CardContainer = (props) => {
   return (
 		<CardWrapper>
     	<Card>
-				< IntroContainer className='intro-card intro-card__visible'>
+				< IntroContainer className='intro-frame intro-frame__visible'>
 					< Intro/>
 				</IntroContainer>
-				< CalendarContainer className='calendar-card'>
+				< CalendarContainer className='calendar-section'>
 					< Calendar updateSelectedBirthDate={props.updateSelectedBirthDate}/>
 				</CalendarContainer>
-				< SearchBarContainer className='search-card'>
+				< SearchBarContainer className='search-bar'>
 					< SearchBar query={props.query} updateSuggestedCities={props.updateSuggestedCities}/>
 				</SearchBarContainer>
-				< CityListContainer className='suggested-cities-card'>
+				< SuggestedCitiesContainer className='suggested-cities-section'>
 					< CityList suggestedCities={props.suggestedCities} updateSelectedCity={props.updateSelectedCity} updateCityInfo={props.updateCityInfo}/>
-				</CityListContainer>
-				< div className='results-data-card'>
+				</SuggestedCitiesContainer>
+				< div className='results-data-section'>
 					< WeatherDataContainer>
 						< WeatherIcon cityWeatherIcon={props.cityWeatherIcon}/>
         		< CityWeatherData cityData={props.cityData} selectedCity={props.selectedCity}/>
@@ -44,7 +44,7 @@ const IntroCard = (props) => {
   );
 }
 
-export default IntroCard;
+export default CardContainer;
 
 
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CityListContainer = styled.div`
+const SuggestedCitiesContainer = styled.div`
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -9,4 +9,4 @@ const CityListContainer = styled.div`
 	width: 650px;
 `;
 
-export default CityListContainer;
+export default SuggestedCitiesContainer;

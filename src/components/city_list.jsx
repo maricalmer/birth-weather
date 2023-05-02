@@ -4,11 +4,10 @@ import City from './city';
 
 const CityList = (props) => {
   const cities = props.suggestedCities;
-  console.log(cities);
   if (!cities || !cities.results) return
 
   return (
-    <div className='city_output'>
+    <div className='suggested-cities'>
 			{cities.results.map((city) => {
 				return (
 					<City city={city} updateSelectedCity={props.updateSelectedCity} updateCityInfo={props.updateCityInfo} key={city.id}/>

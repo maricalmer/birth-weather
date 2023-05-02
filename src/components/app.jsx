@@ -8,7 +8,7 @@ import matchIconClass from '../utils/icon_matcher.js'
 import getCitiesData from '../hooks/useCitiesData.js'
 import getCityData from '../hooks/useCityData.js'
 
-import AppContainer from '../styled/app_container.js'
+import MainContainer from '../styled/main_container.js'
 import CloudsContainer from '../styled/clouds_container.js'
 import CloudsBorder from '../styled/clouds_border.js'
 import TitleContainer from '../styled/title_container.js'
@@ -41,33 +41,27 @@ const App = () => {
   const updateSuggestedCities = async (newQuery) => {
     setQuery(newQuery);
     const citiesData = await getCitiesData(newQuery);
-    console.log(citiesData);
     setSuggestedCities(citiesData);
   }
 
   const updateSelectedBirthDate = (date) => {
-    console.log('in updateSelectedBirthDate');
     setSelectedBirthDate(date);
   }
 
   const updateSelectedCity = (city) => {
-    console.log('in updateSelectedCity');
     setSelectedCity(city);
   }
 
   const updateCityInfo = async (city) => {
-    console.log('in updateCityInfo');
     const cityData = await getCityData(city, selectedBirthDate);
     setCityData(cityData);
 		const weatherIcon = matchIconClass(cityData);
 		setCityWeatherIcon(weatherIcon);
   }
 
-  console.log(cityData);
-
   return (
     <div>
-      < AppContainer>
+      < MainContainer>
         < TitleContainer>
           < InitialTitle className='what-weather-title-anime-js'>
             What was the weather like on your birth date?
@@ -97,7 +91,7 @@ const App = () => {
             />
           </CloudsBorder>
         </CloudsContainer>
-      </AppContainer>
+      </MainContainer>
     </div>
   )
 }

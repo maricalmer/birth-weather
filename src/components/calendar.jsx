@@ -13,9 +13,9 @@ const Calendar = (props) => {
   const handleAccept = (date) => {
     const formattedDate = convertDateForApi(date);
     props.updateSelectedBirthDate(formattedDate);
-    animateCard("calendar-card");
-    animateCard("search-card");
-    animateCard("suggested-cities-card");
+    animateCard("calendar-section");
+    animateCard("search-bar");
+    animateCard("suggested-cities-section");
     const whatDateTitle = document.querySelector('.what-date-title-anime-js');
 		const whatCityTitle = document.querySelector('.what-city-title-anime-js');
     hideTitle(whatDateTitle);

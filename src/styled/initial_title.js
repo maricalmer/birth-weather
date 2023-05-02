@@ -6,7 +6,7 @@ const InitialTitle = styled.div`
 	font-weight: bold;
 	color: #e3e3e3;
 	text-align: center;
-    z-index: 3;
+  z-index: 3;
 	margin-top: 8px;
 `;
 

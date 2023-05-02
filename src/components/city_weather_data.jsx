@@ -1,6 +1,8 @@
 import React from 'react';
 
 import convertTime from '../utils/time_converter';
+import countHours from '../utils/hours_counter';
+import averageCoverage from '../utils/average_calculator';
 import { convertDateForData } from '../utils/date_converter';
 
 const CityWeatherData = (props) => {
@@ -9,9 +11,9 @@ const CityWeatherData = (props) => {
 	const formattedDate = convertDateForData(props.cityData.daily.time[0]);
 	const sunriseTime = convertTime(props.cityData.daily.sunrise[0]);
 	const sunsetTime = convertTime(props.cityData.daily.sunset[0]);
-	const averageCloudsCoverage = Math.round(props.cityData.hourly.cloudcover_mid.reduce((a,b) => a + b,0) / 24);
-	const hoursRain = props.cityData.hourly.rain.filter( (x) => x > 0).length;
-	const hoursSnow = props.cityData.hourly.snowfall.filter( (x) => x > 0).length;
+	const averageCloudsCoverage = averageCoverage(props.cityData.hourly.cloudcover_mid);
+	const hoursRain = countHours(props.cityData.hourly.rain);
+	const hoursSnow = countHours(props.cityData.hourly.snowfall);
 
   return (
     <div className="city-weather-data">

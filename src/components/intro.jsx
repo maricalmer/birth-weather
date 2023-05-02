@@ -6,8 +6,8 @@ import animateCard from '../utils/frame_motion';
 
 const Intro = (props) => {
 	const handleOnClick = () => {
-		animateCard("intro-card");
-		animateCard("calendar-card");
+		animateCard("intro-frame");
+		animateCard("calendar-section");
 		const whatWeatherTitle = document.querySelector('.what-weather-title-anime-js');
 		const whatDateTitle = document.querySelector('.what-date-title-anime-js');
 		hideTitle(whatWeatherTitle);

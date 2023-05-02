@@ -7,10 +7,8 @@ import { showTitle, hideTitle } from '../utils/title_motion';
 
 const BackButtonContainer = (props) => {
 	const handleOnClick = () => {
-		animateCard("calendar-card");
-		animateCard("results-data-card");
-
-
+		animateCard("calendar-section");
+		animateCard("results-data-section");
 		const resultsTitle = document.querySelector('.results-title-anime-js');
 		const whatDateTitle = document.querySelector('.what-date-title-anime-js');
 		hideTitle(resultsTitle);
