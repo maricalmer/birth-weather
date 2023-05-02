@@ -2,12 +2,12 @@ import React from 'react';
 
 import IntroButton from '../styled/intro_button';
 import { showTitle, hideTitle } from '../utils/title_motion';
-import { animateIntroCard, animateCalendarCard } from '../utils/frame_motion';
+import animateCard from '../utils/frame_motion';
 
 const Intro = (props) => {
 	const handleOnClick = () => {
-		animateIntroCard();
-		animateCalendarCard();
+		animateCard("intro-card");
+		animateCard("calendar-card");
 		const whatWeatherTitle = document.querySelector('.what-weather-title-anime-js');
 		const whatDateTitle = document.querySelector('.what-date-title-anime-js');
 		hideTitle(whatWeatherTitle);

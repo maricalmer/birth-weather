@@ -6,16 +6,16 @@ import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import dayjs from 'dayjs';
 
 import { convertDateForApi } from '../utils/date_converter';
-import { animateCalendarCard, animateSearchCard, animateSuggestedCities } from '../utils/frame_motion';
+import animateCard from '../utils/frame_motion';
 import { showTitle, hideTitle } from '../utils/title_motion';
 
 const Calendar = (props) => {
   const handleAccept = (date) => {
     const formattedDate = convertDateForApi(date);
     props.updateSelectedBirthDate(formattedDate);
-    animateCalendarCard();
-    animateSearchCard();
-    animateSuggestedCities();
+    animateCard("calendar-card");
+    animateCard("search-card");
+    animateCard("suggested-cities-card");
     const whatDateTitle = document.querySelector('.what-date-title-anime-js');
 		const whatCityTitle = document.querySelector('.what-city-title-anime-js');
     hideTitle(whatDateTitle);

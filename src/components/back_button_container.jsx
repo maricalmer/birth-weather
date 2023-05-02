@@ -2,13 +2,13 @@ import React from 'react';
 
 import BackButton from '../styled/back_button';
 
-import { animateResultsCard, animateCalendarCard } from '../utils/frame_motion';
+import animateCard from '../utils/frame_motion';
 import { showTitle, hideTitle } from '../utils/title_motion';
 
 const BackButtonContainer = (props) => {
 	const handleOnClick = () => {
-		animateCalendarCard();
-		animateResultsCard();
+		animateCard("calendar-card");
+		animateCard("results-data-card");
 
 
 		const resultsTitle = document.querySelector('.results-title-anime-js');
