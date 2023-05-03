@@ -1,11 +1,11 @@
 import React from 'react';
 
-import BackButton from '../styled/back_button';
+import Button from '../styled/buttons/button';
 
 import animateCard from '../utils/frame_motion';
 import { showTitle, hideTitle } from '../utils/title_motion';
 
-const BackButtonContainer = (props) => {
+const BackButtonWrapper = () => {
 	const handleOnClick = () => {
 		animateCard("calendar-section");
 		animateCard("results-data-section");
@@ -15,10 +15,10 @@ const BackButtonContainer = (props) => {
 		showTitle(whatDateTitle);
 	}
   return (
-		<BackButton onClick={handleOnClick}>
+		<Button $with_top_margin onClick={handleOnClick}>
 			Try again
-		</BackButton>
+		</Button>
   );
 }
 
-export default BackButtonContainer;
+export default BackButtonWrapper;

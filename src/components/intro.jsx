@@ -1,6 +1,6 @@
 import React from 'react';
 
-import IntroButton from '../styled/intro_button';
+import Button from '../styled/buttons/button';
 import { showTitle, hideTitle } from '../utils/title_motion';
 import animateCard from '../utils/frame_motion';
 
@@ -14,9 +14,9 @@ const Intro = (props) => {
 		showTitle(whatDateTitle);
 	}
   return (
-		<IntroButton onClick={handleOnClick}>
+		<Button onClick={handleOnClick}>
 			Get Started
-		</IntroButton>
+		</Button>
   );
 }
 

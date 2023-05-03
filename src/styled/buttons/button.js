@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const IntroButton = styled.div`
+const Button = styled.div`
 	width: fit-content;
 	height: 48px;
 	padding: 8px 48px;
@@ -17,6 +17,11 @@ const IntroButton = styled.div`
 	&:hover {
     opacity: 0.8;
   }
+	${props =>
+    props.$with_top_margin &&
+    css`
+			margin: 24px auto 0 auto;
+    `};
 `;
 
-export default IntroButton;
+export default Button;

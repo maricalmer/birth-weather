@@ -3,17 +3,16 @@ import React, { useState, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import CLOUDS from 'vanta/dist/vanta.clouds.min'
 
-import CardContainer from './card_container';
+import CardWrapper from './card_wrapper';
 import matchIconClass from '../utils/icon_matcher.js'
 import getCitiesData from '../hooks/useCitiesData.js'
 import getCityData from '../hooks/useCityData.js'
 
-import MainContainer from '../styled/main_container.js'
-import CloudsContainer from '../styled/clouds_container.js'
-import CloudsBorder from '../styled/clouds_border.js'
-import TitleContainer from '../styled/title_container.js'
-import InitialTitle from '../styled/initial_title.js'
-import HiddenTitle from '../styled/hidden_title.js'
+import Container from '../styled/containers/container.js'
+import MainContainer from '../styled/containers/main_container.js'
+import CloudsContainer from '../styled/containers/clouds_container.js'
+import CloudsBorder from '../styled/cards/clouds_border.js'
+import Title from '../styled/titles/title.js'
 
 
 const App = () => {
@@ -62,23 +61,23 @@ const App = () => {
   return (
     <div>
       < MainContainer>
-        < TitleContainer>
-          < InitialTitle className='what-weather-title-anime-js'>
+        < Container $small_height>
+          < Title className='what-weather-title-anime-js'>
             What was the weather like on your birth date?
-          </InitialTitle>
-          < HiddenTitle className='what-date-title-anime-js'>
+          </Title>
+          < Title $hidden className='what-date-title-anime-js'>
             What is your date of birth?
-          </HiddenTitle>
-          < HiddenTitle className='what-city-title-anime-js'>
+          </Title>
+          < Title $hidden className='what-city-title-anime-js'>
             In which city were you born?
-          </HiddenTitle>
-          < HiddenTitle className='results-title-anime-js'>
+          </Title>
+          < Title $hidden className='results-title-anime-js'>
             Results
-          </HiddenTitle>
-        </TitleContainer>
+          </Title>
+        </Container>
         < CloudsContainer ref={myRef}>
           < CloudsBorder>
-            < CardContainer
+            < CardWrapper
               query={query} 
               updateSuggestedCities={updateSuggestedCities}
               suggestedCities={suggestedCities}
