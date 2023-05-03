@@ -20,7 +20,7 @@ const Button = styled.div`
 	${props =>
     props.$with_top_margin &&
     css`
-			margin: 24px auto 0 auto;
+			margin: 18px auto;
     `};
 `;
 

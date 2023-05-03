@@ -33,6 +33,7 @@ const CardWrapper = (props) => {
         		< CityWeatherData cityData={props.cityData} selectedCity={props.selectedCity}/>
 					</Container>
 					< BackButtonWrapper updateSelectedCity={props.updateSelectedCity} updateSelectedBirthDate={props.updateSelectedBirthDate}  updateSuggestedCities={props.updateSuggestedCities}/>
+					<p className="data-reference">data provided by Open-Meteo and Copernicus ERA5 initiative</p>
 				</div>
     	</Card>
 		</Container>
