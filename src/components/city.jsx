@@ -1,7 +1,6 @@
 import React from 'react';
 
-import animateCard from '../utils/frame_motion';
-import { showTitle, hideTitle } from '../utils/title_motion';
+import showResults from '../hooks/useSelectCity.js';
 
 const City = (props) => {
 	const srcUrl = `https://hatscripts.github.io/circle-flags/flags/${props.city.country_code.toLowerCase()}.svg`
@@ -9,13 +8,7 @@ const City = (props) => {
 	const handleClick = () => {
 		props.updateSelectedCity(props.city);
 		props.updateCityInfo(props.city);
-		animateCard("suggested-cities-section");
-		animateCard("search-bar");
-		animateCard("results-data-section");
-		const whatCityTitle = document.querySelector('.what-city-title-anime-js');
-		const resultsTitle = document.querySelector('.results-title-anime-js');
-		hideTitle(whatCityTitle);
-		showTitle(resultsTitle);
+		showResults();
 	}
 
   return (

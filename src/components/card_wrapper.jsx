@@ -10,6 +10,8 @@ import BackButtonWrapper from './back_button_wrapper';
 
 import Card from '../styled/cards/card';
 import Container from '../styled/containers/container';
+import ResultsContainer from '../styled/containers/results_container';
+import CalendarContainer from '../styled/containers/calendar_container';
 
 const CardWrapper = (props) => {
   return (
@@ -18,9 +20,9 @@ const CardWrapper = (props) => {
 				< Container $top_full_width className='intro-frame intro-frame__visible'>
 					< Intro/>
 				</Container>
-				< Container className='calendar-section'>
+				< CalendarContainer className='calendar-section'>
 					< Calendar updateSelectedBirthDate={props.updateSelectedBirthDate}/>
-				</Container>
+				</CalendarContainer>
 				< Container className='search-bar'>
 					< SearchBar query={props.query} updateSuggestedCities={props.updateSuggestedCities}/>
 				</Container>
@@ -28,10 +30,10 @@ const CardWrapper = (props) => {
 					< CityList suggestedCities={props.suggestedCities} updateSelectedCity={props.updateSelectedCity} updateCityInfo={props.updateCityInfo}/>
 				</Container>
 				< div className='results-data-section'>
-					< Container $space_around>
+					< ResultsContainer>
 						< WeatherIcon cityWeatherIcon={props.cityWeatherIcon}/>
         		< CityWeatherData cityData={props.cityData} selectedCity={props.selectedCity}/>
-					</Container>
+					</ResultsContainer>
 					< BackButtonWrapper updateSelectedCity={props.updateSelectedCity} updateSelectedBirthDate={props.updateSelectedBirthDate}  updateSuggestedCities={props.updateSuggestedCities}/>
 					<p className="data-reference">data provided by Open-Meteo and Copernicus ERA5 initiative</p>
 				</div>

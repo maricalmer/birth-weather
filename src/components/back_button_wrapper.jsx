@@ -1,18 +1,11 @@
 import React from 'react';
 
 import Button from '../styled/buttons/button';
-
-import animateCard from '../utils/frame_motion';
-import { showTitle, hideTitle } from '../utils/title_motion';
+import restartCycle from '../hooks/useBackButton.js';
 
 const BackButtonWrapper = () => {
 	const handleOnClick = () => {
-		animateCard("calendar-section");
-		animateCard("results-data-section");
-		const resultsTitle = document.querySelector('.results-title-anime-js');
-		const whatDateTitle = document.querySelector('.what-date-title-anime-js');
-		hideTitle(resultsTitle);
-		showTitle(whatDateTitle);
+		restartCycle();
 	}
   return (
 		<Button $with_top_margin onClick={handleOnClick}>

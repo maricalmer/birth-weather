@@ -7,13 +7,7 @@ const Container = styled.div`
   justify-content: center;
   text-align: center;
 	position: absolute;
-	width: 200px;
-  @media ${device.mobileM} { 
-    width: 275px;
-  }
-	@media ${device.mobileL} { 
-    width: 400px;
-  }
+	width: 100%;
 	@media ${device.tablet} { 
     width: 500px;
   }
@@ -22,12 +16,7 @@ const Container = styled.div`
   }
 
   ${props => {
-    if (props.$space_around && css) {
-      return `
-        justify-content: space-around;
-        position: relative;
-    `
-    } else if (props.$top_full_width && css) {
+    if (props.$top_full_width && css) {
       return `
         top: 0;
         left: 0;

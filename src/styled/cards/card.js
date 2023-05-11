@@ -12,7 +12,8 @@ const Card = styled.div`
 	overflow: hidden;
 
 	@media ${device.mobileM} { 
-    width: 275px;
+    width: 100%;
+		padding: 4rem 0;
   }
 
 	@media ${device.mobileL} { 
