@@ -21,9 +21,9 @@
 
 .city-data-item {
   margin: 0.5em;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .search-bar {

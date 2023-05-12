@@ -7,6 +7,8 @@ const SuggestedCitiesContainer = styled.div`
   text-align: center;
   width: 350px;
   margin: 40px auto;
+  position: absolute;
+  margin-left: calc((100% - 300px)/2)
   }}
 `
 
