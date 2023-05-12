@@ -37,7 +37,12 @@ const Container = styled.div`
         height: 100%;
         z-index: 1;
     `
-    }
+    } else if (props.$offset && css) {
+      return `
+        width: 300px;
+        margin: 0 auto;
+    `
+    } 
   }}
 `;
 

@@ -5,16 +5,11 @@ import device from '../../utils/device_size_matcher'
 const Card = styled.div`
 	background-color: rgba(150, 167, 181, .5);
 	border-radius: 24px;
-	width: 200px;
-	height: 375px;
-	padding: 3rem;
+	padding: 4rem 0;
+	width: 100%;
+	height: 50%;
 	position: relative;
 	overflow: hidden;
-
-	@media ${device.mobileM} { 
-    width: 100%;
-		padding: 4rem 0;
-  }
 
 	@media ${device.mobileL} { 
     width: 400px;

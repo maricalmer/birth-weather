@@ -12,6 +12,7 @@ import Card from '../styled/cards/card';
 import Container from '../styled/containers/container';
 import ResultsContainer from '../styled/containers/results_container';
 import CalendarContainer from '../styled/containers/calendar_container';
+import SuggestedCitiesContainer from '../styled/containers/suggested_cities_container';
 
 const CardWrapper = (props) => {
   return (
@@ -26,9 +27,9 @@ const CardWrapper = (props) => {
 				< Container className='search-bar'>
 					< SearchBar query={props.query} updateSuggestedCities={props.updateSuggestedCities}/>
 				</Container>
-				< Container className='suggested-cities-section'>
+				< SuggestedCitiesContainer className='suggested-cities-section'>
 					< CityList suggestedCities={props.suggestedCities} updateSelectedCity={props.updateSelectedCity} updateCityInfo={props.updateCityInfo}/>
-				</Container>
+				</SuggestedCitiesContainer>
 				< div className='results-data-section'>
 					< ResultsContainer>
 						< WeatherIcon cityWeatherIcon={props.cityWeatherIcon}/>

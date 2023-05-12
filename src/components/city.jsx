@@ -13,7 +13,7 @@ const City = (props) => {
 
   return (
     <div className='city' onClick={handleClick}>
-			<p className='city-data-item'>{props.city.name},</p>
+			<p className='city-data-item--name'>{props.city.name},</p>
 			<p className='city-data-item'>{props.city.admin1},</p>
 			<p className='city-data-item'>{props.city.country_code}</p>
 			<img src={srcUrl} alt='' width="18"></img>

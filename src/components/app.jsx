@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 
-import * as THREE from 'three'
-import CLOUDS from 'vanta/dist/vanta.clouds.min'
 
 import CardWrapper from './card_wrapper';
 import matchIconClass from '../utils/icon_matcher.js'
@@ -10,8 +8,7 @@ import getCityData from '../hooks/useCityData.js'
 
 import Container from '../styled/containers/container.js'
 import MainContainer from '../styled/containers/main_container.js'
-import CloudsContainer from '../styled/containers/clouds_container.js'
-import CloudsBorder from '../styled/cards/clouds_border.js'
+import Clouds from '../styled/containers/clouds_container.js'
 import Title from '../styled/titles/title.js'
 
 
@@ -22,21 +19,7 @@ const App = () => {
   const [selectedBirthDate, setSelectedBirthDate] = useState(null);
   const [cityData, setCityData] = useState(null);
   const [cityWeatherIcon, setCityWeatherIcon] = useState(null);
-  const [vantaEffect, setVantaEffect] = useState(null)
-  const myRef = useRef(null)
-
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(CLOUDS({
-        el: myRef.current,
-        THREE: THREE
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-
+  
   const updateSuggestedCities = async (newQuery) => {
     setQuery(newQuery);
     const citiesData = await getCitiesData(newQuery);
@@ -75,21 +58,19 @@ const App = () => {
             Results
           </Title>
         </Container>
-        < CloudsContainer ref={myRef}>
-          < CloudsBorder>
-            < CardWrapper
-              query={query} 
-              updateSuggestedCities={updateSuggestedCities}
-              suggestedCities={suggestedCities}
-              selectedCity={selectedCity}
-              updateSelectedCity={updateSelectedCity}
-              updateSelectedBirthDate={updateSelectedBirthDate}
-              updateCityInfo={updateCityInfo}
-              cityWeatherIcon={cityWeatherIcon}
-              cityData={cityData}
-            />
-          </CloudsBorder>
-        </CloudsContainer>
+        < Clouds>
+          < CardWrapper
+            query={query} 
+            updateSuggestedCities={updateSuggestedCities}
+            suggestedCities={suggestedCities}
+            selectedCity={selectedCity}
+            updateSelectedCity={updateSelectedCity}
+            updateSelectedBirthDate={updateSelectedBirthDate}
+            updateCityInfo={updateCityInfo}
+            cityWeatherIcon={cityWeatherIcon}
+            cityData={cityData}
+          />
+        </Clouds>
       </MainContainer>
     </div>
   )
