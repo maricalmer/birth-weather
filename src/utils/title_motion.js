@@ -3,8 +3,8 @@ import anime from 'animejs/lib/anime.es.js';
 const showTitle = (title) => {
   const titleClass = title.className.split(" ").pop();
   title.innerHTML = title.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-  title.style.fontSize = '48px'
-	
+  title.classList.add('title--visible');
+
   anime.timeline()
   .add({
     targets: `.${titleClass} .letter`,
@@ -18,7 +18,8 @@ const showTitle = (title) => {
 const hideTitle = (title) => {
   const titleClass = title.className.split(" ").pop();
   title.innerHTML = title.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-	
+  setTimeout(() => title.classList.remove('title--visible'), 2000)
+
   anime.timeline()
   .add({
     targets: `.${titleClass} .letter`,

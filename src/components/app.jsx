@@ -62,16 +62,16 @@ const App = () => {
     <div>
       < MainContainer>
         < Container $small_height>
-          < Title className='what-weather-title-anime-js'>
+          < Title className='title--visible what-weather-title-anime-js'>
             What was the weather like on your birth date?
           </Title>
-          < Title $hidden className='what-date-title-anime-js'>
+          < Title className='title--hidden what-date-title-anime-js'>
             What is your date of birth?
           </Title>
-          < Title $hidden className='what-city-title-anime-js'>
+          < Title className='title--hidden what-city-title-anime-js'>
             In which city were you born?
           </Title>
-          < Title $hidden className='results-title-anime-js'>
+          < Title className='title--hidden results-title-anime-js'>
             Results
           </Title>
         </Container>

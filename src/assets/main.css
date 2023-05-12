@@ -16,3 +16,23 @@ body {
   opacity: 1;
   z-index: 1;
 }
+
+.title--visible {
+  font-size: 1.5em !important;
+}
+
+.title--hidden {
+  font-size: 0;
+}
+
+@media (min-width:768px) {
+  .title--visible {
+    font-size: 2.5em !important;
+  }
+}
+
+@media (min-width:1024px) {
+  .title--visible {
+    font-size: 48px !important;
+  }
+}
