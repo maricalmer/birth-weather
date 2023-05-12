@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+### [birth-weather](https://incredible-cascaron-139c6d.netlify.app/), a website to check the weather data on your birth date
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Static website
+Website developed with HTML, CSS, Javascript, React and Styled Components. Assets are bundled with Webpack. Application is run on Netlify.
 
-## Available Scripts
+![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-3-264DE4?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript&logoColor=white)
+![React](https://img.shields.io/badge/react-18-149eca?style=for-the-badge&logo=react&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled_components-5-e59dd9?style=for-the-badge&logo=styled-components&logoColor=white)
 
-In the project directory, you can run:
+## JS Packages (non exhaustive)
 
-### `npm start`
+[![dayjs](https://img.shields.io/badge/dayjs-1.11.7-yellow.svg)](https://yarnpkg.com/package/dayjs)
+[![animejs](https://img.shields.io/badge/animejs-3.2.1-yellow.svg)](https://yarnpkg.com/package/animejs)
+[![@mui/x-date-pickers](https://img.shields.io/badge/@mui-6.2.0-yellow.svg)](https://yarnpkg.com/package/@mui/x-date-pickers)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Run Locally
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the project
 
-### `npm test`
+```bash
+  git clone git@github.com:maricalmer/maricalmer.github.io.git my-project
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Go to the project directory and remove git logs
 
-### `npm run build`
+```bash
+  cd my-project
+  rm -rf .git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  bundle install
+  yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure you have ./node_modules/.bin in your $PATH:
 
-### `npm run eject`
+```bash
+  echo $PATH
+  # You should see `./node_modules/.bin` in the list
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If it's not the case, add it:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  cd ~/code/dotfiles/<your_github_nickname>
+  echo 'export PATH="./bin:./node_modules/.bin:${PATH}"' >> zshrc
+  cd ~/code/<your_github_nickname>/my-project
+  source ~/.zshrc
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Start the server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  yarn start
+```
 
-## Learn More
+## Visit the page!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[maricalmer.com](https://maricalmer.com)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[birth-weather](https://incredible-cascaron-139c6d.netlify.app/)
