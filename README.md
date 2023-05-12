@@ -61,9 +61,9 @@ Start the server
 
 ## Visit the page!
 
-[maricalmer.com](https://maricalmer.com)
+[birth-weather](https://incredible-cascaron-139c6d.netlify.app/)
 
 ## License
 
 
-[birth-weather](https://incredible-cascaron-139c6d.netlify.app/)
+[MIT](https://choosealicense.com/licenses/mit/)
