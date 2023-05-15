@@ -1,7 +1,7 @@
 ### [birth-weather](https://incredible-cascaron-139c6d.netlify.app/), a website to check the weather data on your birth date
 
 ## Static website
-Website developed with HTML, CSS, Javascript, React and Styled Components. Assets are bundled with Webpack. Application is run on Netlify.
+Website developed with HTML, CSS, Javascript, React and Styled Components. Assets are bundled with Webpack. Application is run on Netlify. Data is pulled from Open-Meteo APIs
 
 ![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-3-264DE4?style=for-the-badge&logo=css3&logoColor=white)
@@ -14,6 +14,11 @@ Website developed with HTML, CSS, Javascript, React and Styled Components. Asset
 [![dayjs](https://img.shields.io/badge/dayjs-1.11.7-yellow.svg)](https://yarnpkg.com/package/dayjs)
 [![animejs](https://img.shields.io/badge/animejs-3.2.1-yellow.svg)](https://yarnpkg.com/package/animejs)
 [![@mui/x-date-pickers](https://img.shields.io/badge/@mui-6.2.0-yellow.svg)](https://yarnpkg.com/package/@mui/x-date-pickers)
+
+## APIs
+
+[![archive](https://img.shields.io/badge/Open--Meteo-archive-green.svg)](https://open-meteo.com/en/docs/historical-weather-api)
+[![geocoding](https://img.shields.io/badge/Open--Meteo-geocoding-green.svg)](https://open-meteo.com/en/docs/geocoding-api)
 
 ## Run Locally
 
