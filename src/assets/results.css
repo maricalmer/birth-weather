@@ -33,6 +33,7 @@
   font-family: 'Source Code Pro', monospace;
   font-size: 0.8rem;
   padding-left: 0.5rem;
+  margin-top: 5vh;
 }
 
 .city-weather-data__category {
@@ -45,10 +46,6 @@
 }
 
 @media (min-width:600px) {
-  .results-data-section {
-    margin-top: 10vh;
-  }
-
   .weather-icon {
     font-size: 110px;
   }
@@ -58,6 +55,7 @@
   }
   .city-weather-data {
     font-size: 0.9rem;
+    margin-top: 0;
   }
   .data-reference {
     font-size: 12px;
