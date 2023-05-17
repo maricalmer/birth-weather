@@ -72,11 +72,11 @@
 
 @media (min-width:600px) {
   .search-form__input {
-    width: 100%;
+    width: 300px;
   }
 
   .suggested-cities {
-    left: 80px;
+    width: 300px;
   }
 
   .city-data-item {
@@ -84,9 +84,23 @@
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width:900px) {
+  .search-form__input {
+    width: 450px;
+  }
+
   .suggested-cities {
-    left: 165px;
+    width: 450px;
+  }
+}
+
+@media (min-width:1200px) {
+  .search-form__input {
+    width: 500px;
+  }
+
+  .suggested-cities {
+    width: 500px;
     font-size: 1rem;
   }
 
