@@ -7,12 +7,13 @@ const Card = styled.div`
 	border-radius: 24px;
 	padding: 4rem 0;
 	width: 100%;
-	height: 50%;
+	height: 80%;
 	position: relative;
 	overflow: hidden;
 
 	@media ${device.mobileL} { 
     width: 400px;
+		height: 50%;
   }
 
 	@media ${device.tablet} { 
