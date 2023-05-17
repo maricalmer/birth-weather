@@ -19,10 +19,6 @@ const Button = styled.div`
     opacity: 0.8;
   }
 
-	@media ${device.tablet} { 
-    height: 40px;
-  }
-
 	${props =>
     props.$restart &&
     css`

@@ -32,6 +32,7 @@
   z-index: -100;
   transition: 0.5s ease-in-out;
   width: 100%;
+  margin-top: 4rem;
 }
 
 .search-bar__visible {
