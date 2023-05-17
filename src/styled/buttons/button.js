@@ -22,11 +22,12 @@ const Button = styled.div`
 	${props =>
     props.$restart &&
     css`
-			margin: 7vh auto;
+			margin: 8vh auto 3vh auto;
 			height: 16px;
 
 			@media ${device.mobileM} { 
 				height: 32px;
+				margin: 5vh auto 2vh auto;
 			}
 		
 			@media ${device.tablet} { 
