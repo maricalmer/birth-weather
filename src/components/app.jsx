@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 import CardWrapper from './card_wrapper';
 import matchIconClass from '../utils/icon_matcher.js'
 import getCitiesData from '../hooks/useCitiesData.js'
@@ -42,7 +41,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <main>
       < MainContainer>
         < Container $small_height>
           < Title className='title--visible what-weather-title-anime-js'>
@@ -72,7 +71,7 @@ const App = () => {
           />
         </Clouds>
       </MainContainer>
-    </div>
+    </main>
   )
 }
 
