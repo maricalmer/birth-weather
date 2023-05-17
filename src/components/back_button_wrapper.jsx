@@ -8,7 +8,7 @@ const BackButtonWrapper = () => {
 		restartCycle();
 	}
   return (
-		<Button $with_top_margin onClick={handleOnClick}>
+		<Button $restart onClick={handleOnClick}>
 			Try again
 		</Button>
   );
