@@ -5,7 +5,7 @@
   padding-right: 0.5rem;
   z-index: 1;
   cursor: pointer;
-  width: 100%;
+  width: fit-content;
   border-radius: 15px;
 }
 
