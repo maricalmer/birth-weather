@@ -5,10 +5,9 @@ const SuggestedCitiesContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 350px;
+  width: 100%;
   margin: 40px auto;
   position: absolute;
-  margin-left: calc((100% - 300px)/2)
   }}
 `
 
