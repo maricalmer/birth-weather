@@ -3,6 +3,7 @@
   opacity: 0;
   z-index: -100;
   transition: 0.5s ease-in-out;
+  margin-top: 7vh;
 }
 
 .results-data-section__visible {
@@ -44,6 +45,10 @@
 }
 
 @media (min-width:600px) {
+  .results-data-section {
+    margin-top: 10vh;
+  }
+
   .weather-icon {
     font-size: 110px;
   }
