@@ -24,12 +24,14 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  max-width: 100px;
 }
 
 .search-bar {
   opacity: 0;
   z-index: -100;
   transition: 0.5s ease-in-out;
+  width: 100%;
 }
 
 .search-bar__visible {
@@ -56,6 +58,7 @@
   border: none;
   border-bottom: 2px solid #2d2f31;
   border-radius: 2px;
+  width: 80%;
 }
 
 .search-form__input:focus {
@@ -65,13 +68,19 @@
 .suggested-cities {
   width: 100%;
   font-size: 0.8rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 @media (min-width:600px) {
+  .search-form__input {
+    width: 100%;
+  }
+
   .suggested-cities {
     left: 80px;
+  }
+
+  .city-data-item {
+    max-width: 150px;
   }
 }
 
@@ -79,5 +88,9 @@
   .suggested-cities {
     left: 165px;
     font-size: 1rem;
+  }
+
+  .city-data-item {
+    max-width: 200px;
   }
 }
