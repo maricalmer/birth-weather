@@ -7,8 +7,7 @@ const Button = styled.div`
 	padding: 8px 48px;
 	border-radius: 48px;
 	border: 0;
-	background-color: #a8c7fa;
-	color: #3C394C;
+	background-color: #3C394C;
 	font-size: 20px;
 	display: flex;
 	align-items: center;
