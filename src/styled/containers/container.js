@@ -38,7 +38,8 @@ const Container = styled.div`
         z-index: 1;
         background-color: #7C778D;
         opacity: 0.9;
-        border-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     `
     }
   }}
