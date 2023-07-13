@@ -37,7 +37,7 @@ const Container = styled.div`
         height: 100%;
         z-index: 1;
         background-color: #7C778D;
-        opacity: 0.7;
+        opacity: 0.9;
         border-radius: 25px;
     `
     }
