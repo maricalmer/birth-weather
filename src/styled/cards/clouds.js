@@ -6,7 +6,7 @@ const Clouds = styled.div`
 	background-image: url("https://i.giphy.com/media/RpwupnbQE5nK6iRkYJ/giphy.webp");
 	background-repeat: no-repeat;
   background-size: cover;
-	border-radius: 25px;
+	border-radius: 8px;
 `;
 
 export default Clouds;
