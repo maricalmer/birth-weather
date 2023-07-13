@@ -8,9 +8,6 @@ const Container = styled.div`
   text-align: center;
 	position: absolute;
 	width: 100%;
-  background-color: #7C778D;
-  opacity: 0.7;
-  border-radius: 25px;
 	@media ${device.tablet} {
     width: 500px;
   }
@@ -33,12 +30,15 @@ const Container = styled.div`
         width: 100%;
         height: 15%;
     `
-    } else if (props.$relative && css) {
+    } else if (props.$purlple_screen && css) {
       return `
         position: relative;
         width: 100% !important;
         height: 100%;
         z-index: 1;
+        background-color: #7C778D;
+        opacity: 0.7;
+        border-radius: 25px;
     `
     }
   }}
