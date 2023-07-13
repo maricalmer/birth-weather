@@ -28,7 +28,7 @@ const Container = styled.div`
         top: 0;
         min-height: 100px;
         width: 100%;
-        height: 15%;
+        height: 18%;
     `
     } else if (props.$purlple_screen && css) {
       return `

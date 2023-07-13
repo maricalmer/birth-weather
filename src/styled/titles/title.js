@@ -3,7 +3,7 @@ import device from '../../utils/device_size_matcher'
 
 const Title = styled.div`
 	font-family: 'DM Sans', sans-serif;
-	font-weight: bold;
+	font-weight: 800;
 	color: black;
 	text-align: center;
   z-index: 3;
