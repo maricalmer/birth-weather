@@ -7,7 +7,7 @@ import getCityData from '../hooks/useCityData.js'
 
 import Container from '../styled/containers/container.js'
 import MainContainer from '../styled/containers/main_container.js'
-import Clouds from '../styled/containers/clouds_container.js'
+import Clouds from '../styled/cards/clouds.js'
 import Title from '../styled/titles/title.js'
 
 
@@ -18,7 +18,7 @@ const App = () => {
   const [selectedBirthDate, setSelectedBirthDate] = useState(null);
   const [cityData, setCityData] = useState(null);
   const [cityWeatherIcon, setCityWeatherIcon] = useState(null);
-  
+
   const updateSuggestedCities = async (newQuery) => {
     setQuery(newQuery);
     const citiesData = await getCitiesData(newQuery);
@@ -59,7 +59,7 @@ const App = () => {
         </Container>
         < Clouds>
           < CardWrapper
-            query={query} 
+            query={query}
             updateSuggestedCities={updateSuggestedCities}
             suggestedCities={suggestedCities}
             selectedCity={selectedCity}
