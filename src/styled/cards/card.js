@@ -3,7 +3,6 @@ import device from '../../utils/device_size_matcher'
 
 
 const Card = styled.div`
-	background-color: rgba(150, 167, 181, .5);
 	border-radius: 8px;
 	width: 100%;
 	height: 100%;
