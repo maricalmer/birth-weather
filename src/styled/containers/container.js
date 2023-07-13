@@ -8,10 +8,13 @@ const Container = styled.div`
   text-align: center;
 	position: absolute;
 	width: 100%;
-	@media ${device.tablet} { 
+  background-color: #7C778D;
+  opacity: 0.7;
+  border-radius: 25px;
+	@media ${device.tablet} {
     width: 500px;
   }
-	@media ${device.laptop} { 
+	@media ${device.laptop} {
     width: 650px;
   }
 
