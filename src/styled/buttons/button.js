@@ -8,7 +8,7 @@ const Button = styled.div`
 	border-radius: 48px;
 	border: 0;
 	background-color: #a8c7fa;
-	color: #2364AA;
+	color: #3C394C;
 	font-size: 20px;
 	display: flex;
 	align-items: center;
@@ -25,12 +25,12 @@ const Button = styled.div`
 			margin: 8vh auto 3vh auto;
 			height: 16px;
 
-			@media ${device.mobileM} { 
+			@media ${device.mobileM} {
 				height: 32px;
 				margin: 5vh auto 2vh auto;
 			}
-		
-			@media ${device.tablet} { 
+
+			@media ${device.tablet} {
 				height: 48px;
 			}
 
