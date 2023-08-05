@@ -11,13 +11,13 @@ const Title = styled.div`
 	position: absolute;
   .title--emphasize {
     font-weight: 1000;
+    font-style: normal;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
 	@media ${device.laptop} {
 		margin-top: 8px;
-    font-style: normal;
-    margin-left: 1rem;
-    margin-right: 1rem;
   }
 `;
 
