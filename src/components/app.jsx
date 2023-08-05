@@ -48,10 +48,10 @@ const App = () => {
             What was the weather like on your <span className="title--emphasize">birth date</span>?
           </Title>
           < Title className='title--hidden what-date-title-anime-js'>
-            What is your <span className="title--emphasize">birth date</span>?
+            What is your date of birth?
           </Title>
           < Title className='title--hidden what-city-title-anime-js'>
-            In which <span className="title--emphasize">city</span> were you born?
+            In which city were you born?
           </Title>
           < Title className='title--hidden results-title-anime-js'>
             Results
