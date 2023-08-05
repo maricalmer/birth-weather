@@ -45,7 +45,7 @@ const App = () => {
       < MainContainer>
         < Container $small_height>
           < Title className='title--visible what-weather-title-anime-js'>
-            What was the weather like on your <strong>birth date</strong>?
+            What was the weather like on your <span className="title--emphasize">birth date</span>?
           </Title>
           < Title className='title--hidden what-date-title-anime-js'>
             What is your date of birth?

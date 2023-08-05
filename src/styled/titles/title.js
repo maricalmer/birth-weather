@@ -8,6 +8,9 @@ const Title = styled.div`
 	text-align: center;
   z-index: 3;
 	position: absolute;
+  .title--emphasize {
+    font-weight: 1000;
+  }
 
 	@media ${device.laptop} {
 		margin-top: 8px;
