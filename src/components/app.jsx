@@ -57,6 +57,7 @@ const App = () => {
             Results
           </Title>
         </Container>
+
         < Clouds>
           < CardWrapper
             query={query}
@@ -70,6 +71,7 @@ const App = () => {
             cityData={cityData}
           />
         </Clouds>
+
       </MainContainer>
     </main>
   )
