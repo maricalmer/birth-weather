@@ -32,9 +32,14 @@ const Container = styled.div`
     `
     } else if (props.$purlple_screen && css) {
       return `
+        position: relative;
         width: 100% !important;
         height: 100%;
-        position: relative;
+        z-index: 1;
+        background-color: #7C778D;
+        opacity: 0.9;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     `
     }
   }}
