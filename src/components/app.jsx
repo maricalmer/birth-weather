@@ -7,6 +7,8 @@ import getCityData from '../hooks/useCityData.js'
 
 import Container from '../styled/containers/container.js'
 import MainContainer from '../styled/containers/main_container.js'
+import CardContainer from '../styled/containers/card_container.js'
+import PurpleScreen from '../styled/containers/purple_screen.js'
 import Clouds from '../styled/cards/clouds.js'
 import Title from '../styled/titles/title.js'
 
@@ -58,7 +60,7 @@ const App = () => {
           </Title>
         </Container>
 
-        < Clouds>
+        < CardContainer>
           < CardWrapper
             query={query}
             updateSuggestedCities={updateSuggestedCities}
@@ -70,8 +72,9 @@ const App = () => {
             cityWeatherIcon={cityWeatherIcon}
             cityData={cityData}
           />
-        </Clouds>
-
+          <PurpleScreen />
+          <Clouds />
+        </CardContainer>
       </MainContainer>
     </main>
   )

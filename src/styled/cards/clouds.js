@@ -7,6 +7,9 @@ const Clouds = styled.div`
 	background-repeat: no-repeat;
   background-size: cover;
 	border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export default Clouds;
