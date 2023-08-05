@@ -16,7 +16,7 @@ import SuggestedCitiesContainer from '../styled/containers/suggested_cities_cont
 
 const CardWrapper = (props) => {
   return (
-    <Container $top_full_width>
+    <Container $purlple_screen>
     	<Card>
 				< Container $top_full_width className='intro-frame intro-frame__visible'>
 					< Intro/>
