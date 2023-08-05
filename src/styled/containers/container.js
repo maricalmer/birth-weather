@@ -34,6 +34,7 @@ const Container = styled.div`
       return `
         width: 100% !important;
         height: 100%;
+        position: relative;
     `
     }
   }}
