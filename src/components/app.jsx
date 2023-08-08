@@ -71,7 +71,6 @@ const App = () => {
             updateCityInfo={updateCityInfo}
             cityWeatherIcon={cityWeatherIcon}
             cityData={cityData}
-            className="CARD_WRAPPER"
           />
           <PurpleScreen className="PURPLE_SCREEN"/>
           <Clouds className="CLOUDS"/>
