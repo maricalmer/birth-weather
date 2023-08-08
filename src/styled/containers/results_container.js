@@ -6,16 +6,15 @@ const ResultsContainer = styled.div`
   position: relative;
   top: 0;
 	width: 100%;
-	height: 100%;
 	@media ${device.mobileL} {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
-	@media ${device.tablet} { 
+	@media ${device.tablet} {
     width: 500px;
   }
-	@media ${device.laptop} { 
+	@media ${device.laptop} {
     width: 650px;
   }
 `;

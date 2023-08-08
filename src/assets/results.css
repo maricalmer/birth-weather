@@ -8,6 +8,7 @@
 .results-data-section__visible {
   opacity: 1;
   z-index: 1;
+  padding: 1rem;
 }
 
 .weather-icon {
