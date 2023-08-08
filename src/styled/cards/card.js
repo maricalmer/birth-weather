@@ -8,10 +8,11 @@ const Card = styled.div`
 	height: 100%;
 	position: relative;
 	overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
 	@media ${device.mobileL} {
     width: 400px;
-		height: 75%;
   }
 
 	@media ${device.tablet} {
