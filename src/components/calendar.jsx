@@ -30,6 +30,11 @@ const Calendar = (props) => {
         onAccept={handleAccept}
         sx={{
           backgroundColor: 'transparent',
+          "& .MuiPickersYear-yearButton": {
+            "&.Mui-selected": {
+              backgroundColor: '#3a3942',
+            }
+          },
           "& .MuiPickersDay-root": {
             "&.Mui-selected": {
               backgroundColor: '#565366',
