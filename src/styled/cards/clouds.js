@@ -8,7 +8,8 @@ const Clouds = styled.div`
 	background-image: url("https://i.giphy.com/media/RpwupnbQE5nK6iRkYJ/giphy.webp");
 	background-repeat: no-repeat;
   background-size: cover;
-	border-radius: 8px;
+	border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   position: absolute;
   top: 0;
   left: 0;

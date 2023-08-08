@@ -5,7 +5,8 @@ const PurpleScreen = styled.div`
   height: 100%;
   position: absolute;
   top: 0;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   z-index: -1;
   background-color: rgba(85, 82, 103, 0.5);
 `;
