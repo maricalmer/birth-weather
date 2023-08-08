@@ -20,7 +20,7 @@ const Calendar = (props) => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <StaticDatePicker 
+      <StaticDatePicker
         orientation= {responsiveOrientation}
         disableFuture={true}
         disableHighlightToday={true}
@@ -28,7 +28,14 @@ const Calendar = (props) => {
         minDate={dayjs('1940-01-01')}
         maxDate={dayjs()}
         onAccept={handleAccept}
-        sx={{backgroundColor: 'transparent', color: '#2d2f31'}}
+        sx={{
+          backgroundColor: 'transparent',
+          "& .MuiPickersDay-root": {
+            "&.Mui-selected": {
+              backgroundColor: '#565366',
+            },
+          },
+        }}
         slotProps={{actionBar: {actions: ['accept']}
         }}/>
     </LocalizationProvider>
