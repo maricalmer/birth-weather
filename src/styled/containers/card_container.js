@@ -12,7 +12,7 @@ const CardContainer = styled.div`
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
   position: relative;
-  @media ${device.mobileM} {
+  @media ${device.mobileL} {
     width: 70%;
   }
 `;
