@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../../utils/device_size_matcher'
 
 const CardContainer = styled.div`
 	width: 70%;
@@ -11,6 +12,9 @@ const CardContainer = styled.div`
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
   position: relative;
+  @media ${device.mobileS} {
+    width: 90%;
+  }
 `;
 
 export default CardContainer;
