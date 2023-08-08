@@ -7,7 +7,7 @@ const Button = styled.div`
 	padding: 8px 48px;
 	border-radius: 48px;
 	border: 0;
-	background-color: #3C394C;
+	background-color: #565366;
 	font-size: 20px;
 	display: flex;
 	align-items: center;
@@ -15,7 +15,7 @@ const Button = styled.div`
 	transition: opacity .1s cubic-bezier(.2,0,0,1);
 	opacity: 1;
 	&:hover {
-    opacity: 0.8;
+    background-color: #3a3942;
   }
 
 	${props =>
