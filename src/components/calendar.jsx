@@ -41,6 +41,10 @@ const Calendar = (props) => {
               backgroundColor: '#3a3942',
             },
           },
+          "& .MuiButtonBase-root": {
+            fontWeight: 1000,
+            color: 'black'
+          }
         }}
         slotProps={{actionBar: {actions: ['accept']}
         }}/>
