@@ -4,6 +4,7 @@ const CardContainer = styled.div`
 	width: 70%;
 	// width: 85%;
 	height: 80%;
+  overflow: hidden;
 	// background-image: url("https://i.giphy.com/media/RpwupnbQE5nK6iRkYJ/giphy.webp");
 	// background-repeat: no-repeat;
   // background-size: cover;

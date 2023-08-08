@@ -8,7 +8,8 @@ const PurpleScreen = styled.div`
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   z-index: -1;
-  background-color: rgba(85, 82, 103, 0.6);
+  background-color: rgba(85, 82, 103, 0.5);
+  filter: blur(5px)
 `;
 
 export default PurpleScreen;
