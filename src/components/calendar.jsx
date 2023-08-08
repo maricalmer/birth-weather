@@ -41,7 +41,7 @@ const Calendar = (props) => {
               backgroundColor: '#3a3942',
             },
           },
-          "& .MuiButtonBase-root": {
+          "& .MuiButton-text": {
             fontWeight: 1000,
             color: 'black'
           }
