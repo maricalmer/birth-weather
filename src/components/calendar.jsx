@@ -34,6 +34,12 @@ const Calendar = (props) => {
             "&.Mui-selected": {
               backgroundColor: '#565366',
             },
+            "&.Mui-selected:hover": {
+              backgroundColor: '#3a3942',
+            },
+            "&.Mui-selected:focus": {
+              backgroundColor: '#3a3942',
+            },
           },
         }}
         slotProps={{actionBar: {actions: ['accept']}
