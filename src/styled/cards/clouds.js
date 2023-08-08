@@ -14,6 +14,7 @@ const Clouds = styled.div`
   top: 0;
   left: 0;
   z-index: -2;
+  filter: blur(5px)
 `;
 
 export default Clouds;
