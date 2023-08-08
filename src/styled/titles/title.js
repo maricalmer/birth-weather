@@ -12,8 +12,8 @@ const Title = styled.div`
   .title--emphasize {
     font-weight: 1000;
     font-style: normal;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
 	@media ${device.laptop} {
