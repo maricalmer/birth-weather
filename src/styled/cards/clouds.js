@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 const Clouds = styled.div`
 	width: 100%;
-	// width: 85%;
 	height: 100%;
-	// height: 80%;
 	background-image: url("https://i.giphy.com/media/RpwupnbQE5nK6iRkYJ/giphy.webp");
 	background-repeat: no-repeat;
   background-size: cover;

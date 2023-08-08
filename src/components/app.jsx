@@ -60,7 +60,7 @@ const App = () => {
           </Title>
         </Container>
 
-        < CardContainer className="CARD_CONTAINER">
+        < CardContainer>
           < CardWrapper
             query={query}
             updateSuggestedCities={updateSuggestedCities}
@@ -72,8 +72,8 @@ const App = () => {
             cityWeatherIcon={cityWeatherIcon}
             cityData={cityData}
           />
-          <PurpleScreen className="PURPLE_SCREEN"/>
-          <Clouds className="CLOUDS"/>
+          <PurpleScreen/>
+          <Clouds/>
         </CardContainer>
       </MainContainer>
     </main>
