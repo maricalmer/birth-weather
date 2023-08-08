@@ -73,7 +73,7 @@ const App = () => {
             cityData={cityData}
           />
           <PurpleScreen />
-          <Clouds />
+          <Clouds className="CLOUDS"/>
         </CardContainer>
       </MainContainer>
     </main>
