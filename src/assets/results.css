@@ -10,6 +10,8 @@
   opacity: 1;
   z-index: 1;
   padding: 1rem;
+  background-color: rgba(239, 246, 238, 0.6);
+  border-radius: 8px;
 }
 
 .weather-icon {

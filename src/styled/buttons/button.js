@@ -16,6 +16,7 @@ const Button = styled.div`
 	opacity: 1;
 	&:hover {
     background-color: #3a3942;
+    color: rgba(239, 246, 238)
   }
 
 	${props =>

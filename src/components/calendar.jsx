@@ -29,7 +29,8 @@ const Calendar = (props) => {
         maxDate={dayjs()}
         onAccept={handleAccept}
         sx={{
-          backgroundColor: 'transparent',
+          backgroundColor: 'rgba(239, 246, 238, 0.6)',
+          borderRadius: '8px',
           "& .MuiPickersYear-yearButton": {
             "&.Mui-selected": {
               backgroundColor: '#3a3942',
@@ -49,6 +50,10 @@ const Calendar = (props) => {
           "& .MuiButton-text": {
             fontWeight: 1000,
             color: 'black'
+          },
+          "& .MuiButton-text:hover": {
+            backgroundColor: '#3a3942',
+            color: 'white'
           }
         }}
         slotProps={{actionBar: {actions: ['accept']}
